@@ -14,7 +14,8 @@ You can see a running version of the application at
 [demo]: http://adopt-a-hydrant.herokuapp.com/
 
 ## Installation
-This application requires [Postgres](http://www.postgresql.org/) to be installed
+This application requires [Postgres](http://www.postgresql.org/) to be installed.
+It also requires the prerelease version of bundler: `gem install bundler --pre`  
 
     git clone git://github.com/codeforamerica/adopt-a-hydrant.git
     cd adopt-a-hydrant
