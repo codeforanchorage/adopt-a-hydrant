@@ -8,7 +8,6 @@ gem 'devise'
 gem 'geokit'
 gem 'haml', '~> 3.2.0.alpha'
 gem 'http_accept_language'
-gem 'pg'
 gem 'rails_admin'
 gem 'validates_formatting_of'
 
@@ -23,6 +22,11 @@ end
 
 group :production do
   gem 'puma'
+  gem 'pg'
+end
+
+group :development do
+  gem 'sqlite3'
 end
 
 group :test do
@@ -30,3 +34,6 @@ group :test do
   gem 'sqlite3'
   gem 'webmock'
 end
+
+
+
