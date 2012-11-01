@@ -28,7 +28,6 @@ It also requires the prerelease version of bundler: `gem install bundler --pre`
     rails server
 
 ## Seed Data
-Before seeding, you'll need to add city_id, lat, lng to thing.rb's attr_accessible.  Make sure you remove them when done.    
     bundle exec rake db:seed
 
 ## Contributing
