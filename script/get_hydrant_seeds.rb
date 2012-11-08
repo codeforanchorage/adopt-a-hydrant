@@ -5,7 +5,7 @@ require 'pp'
 
 id = 1
 file = "./db/seeds.rb"
-response = Net::HTTP.get_response(URI.parse("http://arcgis.awwu.biz/ArcGIS/rest/services/ExternalHydrants/MapServer/1/query?text=&geometry=&geometryType=esriGeometryPoint&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&objectIds=&where=1%3D1&time=&returnCountOnly=false&returnIdsOnly=false&returnGeometry=true&maxAllowableOffset=&outSR=4326&outFields=&f=pjson"))
+response = Net::HTTP.get_response(URI.parse("http://arcgis.awwu.biz/ArcGIS/rest/services/ExternalHydrantsadopt/MapServer/0/query?text=&geometry=&geometryType=esriGeometryPoint&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&objectIds=&where=1%3D1&time=&returnCountOnly=false&returnIdsOnly=false&returnGeometry=true&maxAllowableOffset=&outSR=4326&outFields=&f=pjson"))
 data = JSON.parse(response.body)
 geometry = data["geometryType"]
 puts geometry
