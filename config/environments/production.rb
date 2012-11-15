@@ -47,10 +47,18 @@ AdoptAThing::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )
-
+    
   config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { :host => 'ak-adopt-a-hydrant.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = {:host => 'adoptahydrant.org'}
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.gmail.com', 
+    :port=> 587,   
+    :domain => 'thorncp.com',
+    :user_name=>ENV['username'], 
+    :password=>ENV['password'],
+    :authentication=>'plain',
+    :enable_starttls_auto=> true}
 
   # Enable threaded mode
   config.threadsafe!
@@ -66,12 +74,3 @@ AdoptAThing::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
-
-ActionMailer::Base.smtp_settings = {
-  address:        "smtp.sendgrid.net",
-  port:           "25",
-  authentication: :plain,
-  user_name:      ENV['SENDGRID_USERNAME'],
-  password:       ENV['SENDGRID_PASSWORD'],
-  domain:         ENV['SENDGRID_DOMAIN'],
-}
