@@ -36,6 +36,7 @@ $(function() {
     origin,
     anchor
   );
+  addMarkersAround(center.lat(), center.lng());
   var activeThingId;
   var activeMarker;
   var activeInfoWindow;
@@ -483,7 +484,7 @@ $(function() {
       errors.push($('#user_email'));
       $('#user_email').parent().addClass('error');
     } else {
-      $('#user_email').parent().removeClass('error');
+      $('#user_email').parent().repostClass('error');
     }
     if($('#user_name').val() === '') {
       errors.push($('#user_name'));
