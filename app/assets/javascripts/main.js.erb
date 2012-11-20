@@ -407,8 +407,9 @@ $(function() {
             activeInfoWindow.close();
             activeInfoWindow.setContent(data);
             activeInfoWindow.open(map, activeMarker);
-            activeMarker.setIcon(greenMarkerImage);
+            activeMarker.setIcon(greenMarkerImage);                
             activeMarker.setAnimation(google.maps.Animation.BOUNCE);
+            setTimeout(function(){activeMarker.setAnimation(null);}, 1500);
           }
         });
       }
