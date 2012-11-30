@@ -1,6 +1,10 @@
 # Please maintain alphabetical order
 
 en:
+  admin:
+    actions:
+      email_everyone:
+        menu: 'Email everyone a reminder'
   buttons:
     abandon: "Abandon this %{thing}"
     adopt: "Adopt!"

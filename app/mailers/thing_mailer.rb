@@ -6,6 +6,7 @@ class ThingMailer < ActionMailer::Base
     @user = thing.user
     mail(
       {
+        from: 'AdoptAHydrant@ci.anchorage.ak.us',
         to: thing.user.email,
         subject: ["Remember to shovel", thing.name].compact.join(' '),
       }
