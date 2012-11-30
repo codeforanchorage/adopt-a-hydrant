@@ -1,5 +1,5 @@
 class ThingMailer < ActionMailer::Base
-  default from: "boonrs@gmail.com"
+  default from: "AdoptAHydrant@ci.anchorage.ak.us"
 
   def reminder(thing)
     @thing = thing
