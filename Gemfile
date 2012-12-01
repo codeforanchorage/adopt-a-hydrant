@@ -10,6 +10,7 @@ gem 'haml', '~> 3.2.0.alpha'
 gem 'http_accept_language'
 gem 'rails_admin'
 gem 'validates_formatting_of'
+gem 'pg'
 
 platforms :ruby_18 do
   gem 'fastercsv'
@@ -22,16 +23,10 @@ end
 
 group :production do
   gem 'puma'
-  gem 'pg'
-end
-
-group :development do
-  gem 'sqlite3'
 end
 
 group :test do
   gem 'simplecov'
-  gem 'sqlite3'
   gem 'webmock'
 end
 
