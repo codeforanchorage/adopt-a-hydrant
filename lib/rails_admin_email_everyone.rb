@@ -1,9 +1,6 @@
 require 'rails_admin/config/actions'
 require 'rails_admin/config/actions/base'
  
-module RailsAdminPublish
-end
- 
 module RailsAdmin
   module Config
     module Actions
@@ -22,15 +19,18 @@ module RailsAdmin
           true
         end
  
+        register_instance_option :member do
+          false
+        end
+        
         register_instance_option :controller do
           Proc.new do
             # Get all hydrants with users
             @hydrants_with_users = Thing.where('user_id IS NOT NULL')
  
             # Update field published to true
-            @hydrants_with_users.each do |hydrant|
-              from_user = User.find_by_email('adoptahydrant@ci.anchorage.ak.us')
-              @reminder = Reminder.new(:thing_id=>hydrant.id, :to_user_id => hydrant.user.id, :from_user_id => from_user.id)
+            @hydrants_with_users.each do |hydrant|              
+              @reminder = Reminder.new(:thing_id=>hydrant.id, :to_user_id => hydrant.user.id, :from_user_id => current_user.id)
               if @reminder.save
                 ThingMailer.reminder(@reminder.thing).deliver
                 @reminder.update_attribute(:sent, true)

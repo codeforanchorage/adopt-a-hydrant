@@ -30,6 +30,7 @@ en:
     address_2: "Suite 430"
     city: "Anchorage"
     city_state: "Anchorage, Alaska"
+    email: "AdoptAHydrant@ci.anchorage.ak.us"
     neighborhood: "Downtown"
     sms_number: "907-555-1212"
     state: "AK"
