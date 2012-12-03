@@ -36,7 +36,6 @@ $(function() {
     origin,
     anchor
   );
-  addMarkersAround(center.lat(), center.lng());
   var activeThingId;
   var activeMarker;
   var activeInfoWindow;
@@ -130,7 +129,7 @@ $(function() {
       }
     });
   }
-  google.maps.event.addListener(map, 'dragend', function() {
+  google.maps.event.addListener(map, 'idle', function() {
     var center = map.getCenter();
     addMarkersAround(center.lat(), center.lng());
   });
