@@ -26,7 +26,7 @@
             = t("sponsors.mayor.title")
   #feedback
     %p
-      %a{:href => URI.escape("mailto:AdoptAHydrant@ci.anchorage.ak.us?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
+      %a{:href => URI.escape("mailto:#{t("defaults.email")}?subject=#{t("titles.main", :thing => t("defaults.thing").titleize)} - #{t("links.feedback").titleize}")}
         = t("links.feedback")
 .map-container
   #map

@@ -30,5 +30,6 @@ group :test do
   gem 'webmock'
 end
 
-
-
+group :development do
+  gem 'letter_opener'
+end

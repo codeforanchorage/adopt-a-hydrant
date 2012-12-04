@@ -1,6 +1,10 @@
 # Please maintain alphabetical order
 
 fr:
+  admin:
+    actions:
+      email_everyone:
+        menu: 'Envoyer à un rappel de tout le monde'
   buttons:
     abandon: "Abandonner cette %{thing}"
     adopt: "Adopter!"
@@ -26,6 +30,7 @@ fr:
     address_2: "Suite 430"
     city: "Anchorage"
     city_state: "Anchorage, Alaska"
+    email: "AdoptAHydrant@ci.anchorage.ak.us"
     neighborhood: "Downtown"
     sms_number: "907-555-1212"
     state: "AK"
