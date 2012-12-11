@@ -176,6 +176,10 @@ a.btn {
   margin-top: 5px;
 }
 
+.sidebar .error .help-block {
+  text-align: left;
+}
+
 .map-container {
   height: 100%;
   margin: 0 0 0 250px;
