@@ -51,14 +51,14 @@ AdoptAThing::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { :host => 'hydrants.opendata.muni.org' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => 'smtp.gmail.com', 
-    :port=> 587,   
-    :domain => ENV['domain'],
-    :user_name=> ENV['username'], 
-    :password=> ENV['password'],
-    :authentication=> 'plain',
-    :enable_starttls_auto=> true}
+  ActionMActionMailer::Base.smtp_settings = {
+    port: '587',
+    address: 'smtp.mandrillapp.com',
+    user_name: ENV['MANDRILL_USERNAME'],
+    password: ENV['MANDRILL_APIKEY'],
+    domain: 'heroku.com',
+    authentication: :plain
+  }
 
   # Enable threaded mode
   config.threadsafe! unless $rails_rake_task
